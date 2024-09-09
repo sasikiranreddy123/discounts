@@ -1,0 +1,17 @@
+query RunInput {
+  cart {
+    buyerIdentity {
+      customer {
+        amountSpent {
+          amount
+        }
+        numberOfOrders
+      }
+    }
+  }
+   discountNode {
+    metafield(namespace: "order-discount", key: "function-configuration") {
+      value
+    }
+  }
+}
